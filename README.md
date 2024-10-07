@@ -15,7 +15,7 @@ Article: https://www.tv3.lt/naujiena/zmones/petras-daunys-priciuptas-parduotuvej
 1. **Start the Application:**
    - Launch the application by running Bach file `run_app` or `main.py` either through the terminal or an editor like Visual Studio Code.
 2. **Transcription Process:**
-   - The script transcribe.py will automatically read the audio file located in the data folder. The audio file is dynamically set in `main.py` with the following line: `audio_file = "data/daunysIrLasisa3.wav`
+   - The script transcribe.py will automatically read the audio file located in the data folder. The audio file is dynamically set in `main.py` with the following line: `audio_file = "data/daunysIrLasisa3.wav"`
    - If everything runs smoothly, `transcribe.py` will create a file named `transcription.txt` inside the transcriptions folder. This file contains the recognized speech converted into text.
 3. **Summarization Process:**
    - Once `transcription.txt` is successfully created, the `summarize.py` script will be triggered to generate a summary.
