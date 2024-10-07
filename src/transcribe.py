@@ -1,4 +1,5 @@
 import speech_recognition as sr
+import os
 
 class AudioTranscriber:
     def __init__(self, audio_file, txt_file):
@@ -19,6 +20,10 @@ class AudioTranscriber:
     def process_audio(self):
         try:
             print(f"Audio {self.audio_file} in recognition process...")
+
+            transcriptions_folder = "../transcriptions"
+            if not os.path.exists(transcriptions_folder):
+                os.makedirs(transcriptions_folder)
             
             text = self.transcribe_audio()
             if text:

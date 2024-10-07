@@ -1,5 +1,6 @@
 from deep_translator import GoogleTranslator
 from transformers import pipeline
+import os
 
 class TextSummarizer:
     def __init__(self, source_lang="lt", target_lang="en", model="facebook/bart-large-cnn"):
@@ -19,6 +20,10 @@ class TextSummarizer:
     def process_text(self, transcription_txt, summary_txt):
         try:
             print(f"File {transcription_txt} summarizing...")
+
+            summaries_folder = "../summaries"
+            if not os.path.exists(summaries_folder):
+                os.makedirs(summaries_folder)
             
             with open(f"../transcriptions/{transcription_txt}", "r", encoding="utf-8") as source:
                 text = source.read().strip()
