@@ -1,5 +1,5 @@
 .venv/Lib/site-packages/*
-summaries/*
 transcriptions/*
+summaries/*
 !.venv/Lib/site-packages/pip
 !.venv/Lib/site-packages/pip-24.2.dist-info
